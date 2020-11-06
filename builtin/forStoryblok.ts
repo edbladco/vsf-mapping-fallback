@@ -31,7 +31,7 @@ export const forStoryblok = async ({ dispatch, rootState }, { url, params }: Pay
     url = `${url}/home`
   }
   const story = await dispatch(`storyblok/loadStory`, { fullSlug: url }, { root: true })
-  if (story && story.story !== false && story.story.content.component !== 'CategoryPage') {
+  if (story && story.story !== false && story.content.component !== 'CategoryPage') {
     return route
   }
 }
